@@ -6,6 +6,7 @@ public class Collectable : MonoBehaviour
     {
         if (other.CompareTag("Player1"))  // player 1 
         {
+            GameManager.instance.AddScore(1);
             Destroy(gameObject);  // destroy the collectable
         }
     }

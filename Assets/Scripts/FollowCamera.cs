@@ -10,6 +10,9 @@ public class FollowCamera : MonoBehaviour
     {
        
         Vector3 targetPosition = target.position + offset;
+
+        targetPosition.x = Mathf.Clamp(targetPosition.x, -0.8f, 0.8f);
+        targetPosition.y = Mathf.Clamp(targetPosition.y, 0, 19.75f);
         targetPosition.z = transform.position.z;
         transform.position = targetPosition;
     }
@@ -18,8 +21,12 @@ public class FollowCamera : MonoBehaviour
     void Update()
     {
 
-        Vector3 targetPosition = target.position + offset;
+        Vector3 targetPosition = target.position + offset; 
+
+        targetPosition.x = Mathf.Clamp(targetPosition.x, -0.8f, 0.8f);
+        targetPosition.y = Mathf.Clamp(targetPosition.y, 0, 19.75f);
         targetPosition.z = transform.position.z;
         transform.position = Vector3.Lerp(transform.position, targetPosition, smoothSpeed * Time.deltaTime);
+        
     }
 }
