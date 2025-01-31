@@ -2862,6 +2862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 0
+  scoreRequired: 10
+  doorCollider: {fileID: 0}
 --- !u!61 &1554763464
 BoxCollider2D:
   m_ObjectHideFlags: 0
